@@ -6,6 +6,23 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.22] - 2025-11-22
+
+### Changed
+- **Repository Migration**: Moved from GitLab (dotfiles monorepo) to dedicated GitHub repository
+  - Updated repository URL in `package.json` to `https://github.com/enBonnet/orange-flavor-theme-vscode`
+  - Updated all repository references in README.md
+  - Simplified clone instructions for standalone repository
+- **README Enhancements**:
+  - Added Open VSX Registry badge and marketplace link
+  - Reorganized installation section with direct marketplace links
+  - Added support information for VSCodium and Code-OSS users
+- **Package Improvements**:
+  - Added keyword tags: orange, flavor, dark, light, svelte, javascript, react
+  - Updated VSIX package output to `releases/` directory
+
+## [1.0.2] - 2025-11-21
+
 ### Changed
 - Enhanced README with comprehensive documentation for packaging and publishing
 
