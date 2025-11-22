@@ -2,10 +2,10 @@
   "name": "orange-flavor-theme",
   "displayName": "Orange Flavor Theme",
   "description": "Fresh colors with orange flavor theme but always in the dark zone.",
-  "version": "1.0.2",
+  "version": "1.0.21",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/enbonnet/dotfiles.git"
+    "url": "https://github.com/enBonnet/orange-flavor-theme-vscode.git"
   },
   "icon": "images/icon.png",
   "license": "MIT",
@@ -14,11 +14,20 @@
     "vscode": "^1.95.0"
   },
   "categories": [
-    "Themes"
+    "Themes",
+  ],
+  "tags": [
+    "orange",
+    "flavor",
+    "dark",
+    "light",
+    "svelte",
+    "javascript",
+    "react"
   ],
   "scripts": {
     "vsce:publish": "vsce publish",
-    "vsce:package": "vsce package"
+    "vsce:package": "vsce package -o releases/"
   },
   "contributes": {
     "themes": [

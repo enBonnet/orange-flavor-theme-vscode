@@ -68,7 +68,7 @@
 
 ## 🛠️ Development
 
-This theme is part of the [dotfiles repository](https://gitlab.com/enbonnet/dotfiles).
+This theme is maintained in its own [GitHub repository](https://github.com/enBonnet/orange-flavor-theme-vscode).
 
 ### Prerequisites
 
@@ -82,8 +82,8 @@ npm install -g @vscode/vsce
 
 ```bash
 # Clone the repository
-git clone https://gitlab.com/enbonnet/dotfiles.git
-cd dotfiles/orange-flavor-theme
+git clone https://github.com/enBonnet/orange-flavor-theme-vscode.git
+cd orange-flavor-theme-vscode
 
 # Install dependencies
 npm install
@@ -120,7 +120,7 @@ MIT License - See [LICENSE.md](LICENSE.md) for details.
 
 ## 💬 Feedback
 
-Found a bug or have a suggestion? Please open an issue on the [GitLab repository](https://gitlab.com/enbonnet/dotfiles).
+Found a bug or have a suggestion? Please open an issue on the [GitHub repository](https://github.com/enBonnet/orange-flavor-theme-vscode).
 
 ---
 
