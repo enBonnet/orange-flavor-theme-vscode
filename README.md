@@ -11,7 +11,10 @@
 
   <p>
     <a href="https://marketplace.visualstudio.com/items?itemName=enbonnet.orange-flavor-theme">
-      <img src="https://img.shields.io/visual-studio-marketplace/v/enbonnet.orange-flavor-theme?style=flat-square&label=Version" alt="Version" />
+      <img src="https://img.shields.io/visual-studio-marketplace/v/enbonnet.orange-flavor-theme?style=flat-square&label=VS%20Marketplace" alt="VS Marketplace Version" />
+    </a>
+    <a href="https://open-vsx.org/extension/enBonnet/orange-flavor-theme">
+      <img src="https://img.shields.io/open-vsx/v/enBonnet/orange-flavor-theme?style=flat-square&label=Open%20VSX" alt="Open VSX Version" />
     </a>
     <a href="https://marketplace.visualstudio.com/items?itemName=enbonnet.orange-flavor-theme">
       <img src="https://img.shields.io/visual-studio-marketplace/i/enbonnet.orange-flavor-theme?style=flat-square&label=Installs" alt="Installs" />
@@ -56,13 +59,21 @@
 
 ## 🚀 Installation
 
+### From VS Code Marketplace
+
 1. Open **VS Code**.
 2. Go to **Extensions** (`Ctrl+Shift+X` / `Cmd+Shift+X`).
 3. Search for `"Orange Flavor Theme"`.
 4. Click **Install**.
-5. Select your flavor:
-   - `Ctrl+K Ctrl+T` (Windows/Linux) or `Cmd+K Cmd+T` (macOS).
-   - Choose **Orange Flavor** or **Orange Flavor (Light)**.
+
+**Or install directly:**
+- [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=enbonnet.orange-flavor-theme)
+- [Open VSX Registry](https://open-vsx.org/extension/enBonnet/orange-flavor-theme) (for VSCodium, Code-OSS, etc.)
+
+### Activate the Theme
+
+1. Press `Ctrl+K Ctrl+T` (Windows/Linux) or `Cmd+K Cmd+T` (macOS).
+2. Choose **Orange Flavor** or **Orange Flavor (Light)**.
 
 ---
 
