@@ -133,6 +133,10 @@ MIT License - See [LICENSE.md](LICENSE.md) for details.
 
 Found a bug or have a suggestion? Please open an issue on the [GitHub repository](https://github.com/enBonnet/orange-flavor-theme-vscode).
 
+## Inspiration
+
+- Demo files and code taken from [cobalt2-vscode](https://github.com/wesbos/cobalt2-vscode) repository.
+
 ---
 
 <div align="center">
