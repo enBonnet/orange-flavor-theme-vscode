@@ -6,6 +6,17 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.28] - 2025-12-03
+
+### Fixed
+- **Active Tab Visibility in Dark Themes**: Improved readability of active tabs with errors/modifications
+  - Changed `tab.activeBackground` from orange (`#f47c20`) to teal (`#2a7f7f`) for better text contrast
+  - Updated `tab.activeModifiedBorder` to bright red (`#ff4757`) for clear error/modification indicators
+  - Enhanced inactive modified border to darker red-brown (`#8b3a3a`)
+  - Updated unfocused active modified border to vibrant orange (`#ff6b35`)
+  - Applies to both Orange Flavor and Orange Flavor Soft dark themes
+
+
 ## [1.0.27] - 2025-12-03
 
 ### Added
