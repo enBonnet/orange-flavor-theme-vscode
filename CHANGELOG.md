@@ -6,6 +6,26 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.27] - 2025-12-03
+
+### Added
+- **Modified Tab Indicators**: Added border colors for tabs with unsaved changes
+  - `tab.activeModifiedBorder`, `tab.inactiveModifiedBorder`
+  - `tab.unfocusedActiveModifiedBorder`, `tab.unfocusedInactiveModifiedBorder`
+- **Error/Warning/Info Decorations**: Added squiggle underline colors
+  - Error: Bright red (`#ff6b6b`) in dark themes, darker red (`#d63031`) in light themes
+  - Warning: Orange (`#f47c20`) across all themes
+  - Info: Teal (`#2a7f7f`) across all themes
+- **Pinned Tab Separator**: Added `tab.lastPinnedBorder` using teal color
+
+### Fixed
+- **Unfocused Active Tab Contrast**: Changed text color from white to dark (`#051014`) in dark themes for better readability
+- **Git Ignored Files Visibility**: Lightened ignored files/folders color for better visibility
+  - Dark themes: Changed from `#7c362666` to `#b8856d99` (60% opacity)
+  - Light themes: Changed from `#b8856d` to `#c9a08a`
+
+
+
 ## [1.0.25] - 2025-12-03
 
 ### Added
