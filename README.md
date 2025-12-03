@@ -32,8 +32,14 @@
 ### Orange Flavor (Dark)
 ![Orange Flavor Dark](images/screenshots/dark.png)
 
+### Orange Flavor (Dark Soft)
+![Orange Flavor Dark Soft](images/screenshots/dark-soft.png)
+
 ### Orange Flavor (Light)
 ![Orange Flavor Light](images/screenshots/light.png)
+
+### Orange Flavor (Light Soft)
+![Orange Flavor Light Soft](images/screenshots/light-soft.png)
 
 ---
 
