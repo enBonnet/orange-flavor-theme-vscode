@@ -6,6 +6,25 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [1.0.25] - 2025-12-03
+
+### Added
+- **Orange Flavor Soft** - New dark theme variant with softer, more subtle borders
+- **Orange Flavor Soft (Light)** - New light theme variant with softer, more subtle borders
+- Added "soft" and "tanstack" keywords to package.json
+
+### Changed
+- Updated package description to be more inclusive of both light and dark themes
+- Moved Installation section before Features in README for better user experience
+
+### Fixed
+- **Active Tab Contrast**: Improved text contrast on active tabs in Light theme
+  - Changed `tab.activeForeground` from `#f8f4f9` to `#051014` for better readability
+- **Soft Theme Borders**: Replaced hard borders with softer colors closer to backgrounds
+  - Light themes: Using `#e0d4d8` and `#d4c4c9` for subtle separation
+  - Dark themes: Using `#0f2329` and `#1a3035` for gentle visual boundaries
+
+
 ## [1.0.22] - 2025-11-22
 
 ### Changed

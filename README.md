@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/icon.png" alt="Orange Flavor Theme Logo" width="128" height="128" />
+  <img src="images/icon-removebg-preview.png" alt="Orange Flavor Theme Logo" width="128" height="128" />
 
   # Orange Flavor Theme
 

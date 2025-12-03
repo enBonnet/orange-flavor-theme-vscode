@@ -2,12 +2,12 @@
   "name": "orange-flavor-theme",
   "displayName": "Orange Flavor Theme",
   "description": "Fresh colors with orange flavor theme.",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "repository": {
     "type": "git",
     "url": "https://github.com/enBonnet/orange-flavor-theme-vscode.git"
   },
-  "icon": "images/icon.png",
+  "icon": "images/icon-removebg-preview.png",
   "license": "MIT",
   "publisher": "enbonnet",
   "engines": {
