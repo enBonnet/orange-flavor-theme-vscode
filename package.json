@@ -1,7 +1,7 @@
 {
   "name": "orange-flavor-theme",
   "displayName": "Orange Flavor Theme",
-  "description": "Fresh colors with orange flavor theme but always in the dark zone.",
+  "description": "Fresh colors with orange flavor theme.",
   "version": "1.0.24",
   "repository": {
     "type": "git",
@@ -23,7 +23,9 @@
     "light",
     "svelte",
     "javascript",
-    "react"
+    "react",
+    "soft",
+    "tanstack"
   ],
   "scripts": {
     "vsce:publish": "vsce publish",
@@ -40,6 +42,16 @@
         "label": "Orange Flavor (Light)",
         "uiTheme": "vs",
         "path": "./src/themes/orange-flavor-color-theme-light.json"
+      },
+      {
+        "label": "Orange Flavor Soft (Light)",
+        "uiTheme": "vs",
+        "path": "./src/themes/orange-flavor-color-theme-soft-light.json"
+      },
+      {
+        "label": "Orange Flavor Soft",
+        "uiTheme": "vs-dark",
+        "path": "./src/themes/orange-flavor-color-theme-soft.json"
       }
     ]
   }

@@ -37,26 +37,6 @@
 
 ---
 
-## ✨ Features
-
-- **Dual Themes**: Seamlessly switch between **Orange Flavor** (Dark) and **Orange Flavor (Light)**.
-- **Carefully Crafted Colors**:
-  - 🍊 **Primary**: Vibrant Orange (`#f47c20`) for focus.
-  - 🌲 **Secondary**: Cool Teal (`#2a7f7f`) for balance.
-  - 🍫 **Tertiary**: Warm Brown (`#7c3626`) for depth.
-- **Complete Coverage**: Optimized for syntax highlighting, UI elements, and terminal colors.
-- **Readability First**: High contrast where it matters, easy on the eyes for long coding sessions.
-
-## 🎨 Color Palette
-
-| Color | Hex | Usage |
-|-------|-----|-------|
-| **Orange** | `#f47c20` | Active tabs, highlights, keywords |
-| **Teal** | `#2a7f7f` | Strings, status bar, selections |
-| **Brown** | `#7c3626` | Comments, borders, line numbers |
-| **Dark BG** | `#051014` | Editor background (Dark) |
-| **Light BG** | `#ffffff` | Editor background (Light) |
-
 ## 🚀 Installation
 
 ### From VS Code Marketplace
@@ -76,6 +56,26 @@
 2. Choose **Orange Flavor** or **Orange Flavor (Light)**.
 
 ---
+
+## ✨ Features
+
+- **Dual Themes**: Seamlessly switch between **Orange Flavor** (Dark) and **Orange Flavor (Light)**.
+- **Carefully Crafted Colors**:
+  - 🍊 **Primary**: Vibrant Orange (`#f47c20`) for focus.
+  - 🌲 **Secondary**: Cool Teal (`#2a7f7f`) for balance.
+  - 🍫 **Tertiary**: Warm Brown (`#7c3626`) for depth.
+- **Complete Coverage**: Optimized for syntax highlighting, UI elements, and terminal colors.
+- **Readability First**: High contrast where it matters, easy on the eyes for long coding sessions.
+
+## 🎨 Color Palette
+
+| Color | Hex | Usage |
+|-------|-----|-------|
+| **Orange** | `#f47c20` | Active tabs, highlights, keywords |
+| **Teal** | `#2a7f7f` | Strings, status bar, selections |
+| **Brown** | `#7c3626` | Comments, borders, line numbers |
+| **Dark BG** | `#051014` | Editor background (Dark) |
+| **Light BG** | `#ffffff` | Editor background (Light) |
 
 ## 🛠️ Development
 
