@@ -175,7 +175,7 @@
     "gitDecoration.modifiedResourceForeground": "#f47c20",
     "gitDecoration.deletedResourceForeground": "#7c3626",
     "gitDecoration.untrackedResourceForeground": "#2a7f7f",
-    "gitDecoration.ignoredResourceForeground": "#b8856d",
+    "gitDecoration.ignoredResourceForeground": "#c9a08a",
     "gitDecoration.conflictingResourceForeground": "#f47c20",
     "debugToolBar.background": "#f0e8eb",
     "debugToolBar.border": "#7c3626",
