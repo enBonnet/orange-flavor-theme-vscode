@@ -88,7 +88,7 @@
     "titleBar.border": "#e0d4d8",
     "editorGroupHeader.tabsBackground": "#f0e8eb",
     "editorGroupHeader.tabsBorder": "#e0d4d8",
-    "tab.activeBackground": "#f47c20",
+    "tab.activeBackground": "#ffffff",
     "tab.activeForeground": "#051014",
     "tab.activeBorder": "#f47c20",
     "tab.activeBorderTop": "#f47c20",
