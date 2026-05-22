@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Language Scoping Fixes | Orange Flavor Theme</title>
+  <meta name="description" content="Explicit TextMate scoping rules for 13+ languages in the Orange Flavor VS Code theme." />
+  <link rel="icon" type="image/png" href="images/icon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .search-container {
+      display: flex;
+      justify-content: center;
+      padding: 0 2rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .search-input {
+      width: 100%;
+      max-width: 520px;
+      padding: 0.75rem 1.25rem;
+      border-radius: 10px;
+      border: 1px solid var(--brown);
+      background: var(--bg-light);
+      color: var(--fg);
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .search-input::placeholder {
+      color: var(--fg-muted);
+    }
+
+    .search-input:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(244, 124, 32, 0.15);
+    }
+
+    .lang-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .lang-card {
+      background: var(--bg-light);
+      border: 1px solid rgba(42, 127, 127, 0.15);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .lang-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--orange);
+    }
+
+    .lang-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--fg);
+      margin-bottom: 0.75rem;
+    }
+
+    .scope-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .scope-badge {
+      display: inline-block;
+      background: rgba(42, 127, 127, 0.15);
+      color: var(--teal);
+      font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    .empty-state {
+      display: none;
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3rem;
+      color: var(--fg-muted);
+      font-weight: 300;
+      font-size: 1rem;
+    }
+
+    .empty-state.visible {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="images/icon.png" alt="Orange Flavor" />
+        Orange Flavor
+      </a>
+      <nav>
+        <ul class="header-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="languages.html" class="active">Language Fixes</a></li>
+          <li><a href="https://github.com/enBonnet/orange-flavor-theme-vscode" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <h1>Language Scoping Fixes</h1>
+      <p>Each language below has explicit TextMate scope rules in the theme JSON. Additional languages inherit styling from the general-purpose scoping rules.</p>
+    </section>
+
+    <div class="search-container">
+      <input type="text" class="search-input" id="search" placeholder="Filter by language name or scope..." />
+    </div>
+
+    <div class="lang-grid" id="langGrid">
+      <div class="empty-state" id="emptyState">No languages match your search.</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Crafted with &#x1F34A; by <a href="https://github.com/enBonnet">enbonnet</a>. Licensed under <a href="https://github.com/enBonnet/orange-flavor-theme-vscode/blob/main/LICENSE.md">MIT</a>.</p>
+  </footer>
+
+  <script>
+    const languages = [
+      {
+        name: "CSS / Stylus",
+        scopes: [
+          "source.css entity",
+          "entity.other.attribute-name.id.css",
+          "entity.name.tag",
+          "source.css support",
+          "source.css constant",
+          "source.css support.constant",
+          "source.css string",
+          "source.css variable",
+          "source.stylus entity",
+          "source.stylus support",
+          "source.stylus constant",
+          "source.stylus support.constant",
+          "source.stylus string",
+          "source.stylus variable"
+        ]
+      },
+      {
+        name: "HTML",
+        scopes: [
+          "text.html.basic entity.name",
+          "meta.toc-list.id.html",
+          "text.html.basic entity.other",
+          "meta.tag.metadata.script.html entity.name.tag.html"
+        ]
+      },
+      {
+        name: "JavaScript",
+        scopes: [
+          "source.js storage.type.function",
+          "variable.language",
+          "entity.name.type.class.js",
+          "entity.other.inherited-class.js"
+        ]
+      },
+      {
+        name: "TypeScript",
+        scopes: [
+          "source.ts storage.type.function",
+          "source.ts entity.name.type",
+          "source.ts keyword",
+          "source.ts punctuation.definition.parameters",
+          "meta.arrow.ts punctuation.definition.parameters",
+          "keyword.control.default.ts",
+          "meta.return.type.ts"
+        ]
+      },
+      {
+        name: "React (JSX / TSX)",
+        scopes: [
+          "meta.jsx.children",
+          "meta.jsx.children.js",
+          "meta.jsx.children.tsx",
+          "entity.other.attribute-name.tsx"
+        ]
+      },
+      {
+        name: "JSON",
+        scopes: [
+          "source.json support",
+          "source.json string",
+          "source.json punctuation.definition.string"
+        ]
+      },
+      {
+        name: "Markdown",
+        scopes: [
+          "punctuation.definition.heading.markdown",
+          "entity.name.section.markdown",
+          "markup.heading.setext.1.markdown",
+          "markup.heading.setext.2.markdown",
+          "meta.paragraph.markdown",
+          "beginning.punctuation.definition.quote.markdown",
+          "markup.quote.markdown meta.paragraph.markdown",
+          "meta.separator.markdown",
+          "markup.bold.markdown",
+          "markup.italic.markdown",
+          "beginning.punctuation.definition.list.markdown",
+          "string.other.link.title.markdown",
+          "string.other.link.description.markdown",
+          "markup.underline.link.markdown",
+          "markup.underline.link.image.markdown",
+          "fenced_code.block.language",
+          "markup.inline.raw.markdown"
+        ]
+      },
+      {
+        name: "Python",
+        scopes: [
+          "variable.parameter.function.language.special.self.python",
+          "meta.function-call.generic.python",
+          "meta.function-call.arguments.python"
+        ]
+      },
+      {
+        name: "PHP",
+        scopes: [
+          "source.php entity",
+          "variable.other.php"
+        ]
+      },
+      {
+        name: "C#",
+        scopes: [
+          "storage.type.cs",
+          "entity.name.variable.property.cs",
+          "storage.modifier.cs"
+        ]
+      },
+      {
+        name: "INI",
+        scopes: [
+          "source.ini entity",
+          "source.ini keyword",
+          "source.ini punctuation.definition",
+          "source.ini punctuation.separator"
+        ]
+      },
+      {
+        name: "Pug / Jade",
+        scopes: [
+          "text.jade entity.name",
+          "text.jade entity.other.attribute-name.tag",
+          "text.jade string.interpolated"
+        ]
+      },
+      {
+        name: "Diff",
+        scopes: [
+          "markup.inserted",
+          "meta.diff.header.to-file",
+          "punctuation.definition.inserted",
+          "markup.deleted",
+          "meta.diff.header.from-file",
+          "punctuation.definition.deleted"
+        ]
+      }
+    ];
+
+    const langGrid = document.getElementById('langGrid');
+    const emptyState = document.getElementById('emptyState');
+    const searchInput = document.getElementById('search');
+
+    function renderCards(filterText) {
+      const term = filterText.toLowerCase();
+      let visibleCount = 0;
+
+      langGrid.querySelectorAll('.lang-card').forEach(function(card) {
+        card.remove();
+      });
+
+      languages.forEach(function(lang) {
+        if (term) {
+          var nameMatch = lang.name.toLowerCase().indexOf(term) !== -1;
+          var scopeMatch = lang.scopes.some(function(s) {
+            return s.toLowerCase().indexOf(term) !== -1;
+          });
+          if (!nameMatch && !scopeMatch) return;
+        }
+
+        visibleCount++;
+
+        var card = document.createElement('div');
+        card.className = 'lang-card';
+
+        var nameEl = document.createElement('div');
+        nameEl.className = 'lang-name';
+        nameEl.textContent = lang.name;
+        card.appendChild(nameEl);
+
+        var list = document.createElement('div');
+        list.className = 'scope-list';
+
+        lang.scopes.forEach(function(scope) {
+          var badge = document.createElement('span');
+          badge.className = 'scope-badge';
+          badge.textContent = scope;
+          list.appendChild(badge);
+        });
+
+        card.appendChild(list);
+        langGrid.appendChild(card);
+      });
+
+      if (visibleCount === 0) {
+        emptyState.classList.add('visible');
+      } else {
+        emptyState.classList.remove('visible');
+      }
+    }
+
+    searchInput.addEventListener('input', function(e) {
+      renderCards(e.target.value);
+    });
+
+    renderCards('');
+  </script>
+</body>
+</html>
